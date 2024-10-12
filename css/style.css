@@ -3,6 +3,7 @@
 body {
    width: 1200px;
    max-width: 1200px;
+   height: 1200px;
    font: 10px, Arial;
    padding: 5px;
    margin: auto;
@@ -14,17 +15,6 @@ header {
     border-radius: 25px;
     padding: 2px;
     margin: 10px;
-    background-color: rgb(60, 122, 176);
-}
-
-footer {
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 2px;
-    margin: 5px;
-    position: fixed;
-    bottom: 0px;
-    left: 0;
     background-color: rgb(60, 122, 176);
 }
 
@@ -43,6 +33,7 @@ footer p {
     color: orange;
 }
 
+
 main {
     width: 750px;
     float: left;
@@ -52,13 +43,25 @@ main {
 }
 
 aside {
-    width: 400px;
-    float: right;
+    width: 350px;
+    float: left;
     padding: 2px;
     margin: 5px;
-    background-color: rgb(240, 240, 230);
+    background-color: rgb(60, 122, 176);
+    height: 500px;
 }
 
+footer {
+    clear: left;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 2px;
+    margin: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(60, 122, 176);
+}
 .mainimg {
     border: 1px solid black;
 }
