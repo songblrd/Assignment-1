@@ -1,7 +1,7 @@
 /* Marianne Moyo 7955024 */
 
 body {
-   width: 1200px;
+   width: 1000px;
    max-width: 1200px;
    height: 1200px;
    font: 10px, Arial;
@@ -15,44 +15,72 @@ header {
     border-radius: 25px;
     padding: 2px;
     margin: 10px;
-    background-color: rgb(60, 122, 176);
+    background-image: linear-gradient(to right, #00b4c5 , cornflowerblue);
 }
 
 h1 {
     font-variant: small-caps;
-    color: orange;
+    color: black;
 }
 
 h2 {
     font-variant: small-caps;
-    color: orange;
+    color: black;
+    padding: 50px;
+}
+
+h3 {
+    color: black;
+    font-variant: small-caps;
+    font-size: larger;
 }
 
 footer p {
     font-size: medium;
-    color: orange;
+    color: black;
 }
 
 
 main {
+    display: flex;
     width: 750px;
-    float: left;
     padding: 2px;
     margin: 5px;
     background-color: rgb(240, 240, 230);
+    align-content: center
+
 }
 
-aside {
-    width: 350px;
-    float: left;
-    padding: 2px;
+main aside {
+    display: inline-block;
+    width: 550px;
+    padding: 5px;
     margin: 5px;
-    background-color: rgb(60, 122, 176);
+    background-color: #00b4c5;
     height: 500px;
+    background-image: url(https://historychronicles.org/wp-content/uploads/2023/10/Alexander-the-Great-and-Aristotle-1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex-basis: 200px;
+}
+
+main aside ul li {
+    list-style-type: none;
+}
+
+main aside ul li a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+
+main aside ul li {
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
-    clear: left;
     border: 2px solid black;
     border-radius: 20px;
     padding: 2px;
@@ -60,19 +88,15 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(60, 122, 176);
-}
+    background-image: linear-gradient(to right, #00b4c5 , cornflowerblue);}
+
 .mainimg {
     border: 1px solid black;
 }
 
 #firstimg {
-    position: relative;
-    width: 50%;
-}
-
-#secondimage {
-    width: 50%;
+    display: flex;
+    width: 200px;
 }
 
 figcaption {
@@ -86,16 +110,106 @@ blockquote {
     font-size: large;
 }
 
-ul {
-    list-style-type: none;
-    line-height: 32px;
+.listnav {
+    background-color: rgb(60, 122, 176);
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+    border: 1px solid black;
 }
 
-ul >  li > a {
+.listnav a {
     text-decoration: none;
-    color: orange;
+    text-align: center;
+    flex-direction: row;
+    color: black;
 }
 
-a:hover {
-    color: aqua;
+.listnav li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.listnav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.listnav a:hover {
+    color: white;
+}
+
+table {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+    font-size: larger;
+}
+
+td {
+    border: 1px solid black;
+}
+
+#gallery {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+#gallery img {
+    width: 150%;
+    border: 1px solid black;
+}
+
+
+form {
+    background-color:rgb(240, 240, 230);
+    font-size: 1rem;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+#checkbox {
+ margin: 5px;
+}
+
+@media (max-width: 800px) {
+    main {
+        font-size: 1rem;
+        flex-direction: column;
+        flex-basis: 200px;
+    }
+    #gallery {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 200px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    main {
+        font-size: 1rem;
+        flex-direction: column;
+        flex-basis: 400px;
+        padding: 1rem;
+    }
+
+    #gallery {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 400px;
+        padding: 1rem;
+    }
+
+    main aside {
+        background-image: url(https://investinhistory.ca/wp-content/uploads/2024/02/1000000941.jpg);
+    }
 }
